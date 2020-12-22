@@ -22,7 +22,7 @@ public class Sorts{
 	}
 
 	public static void selectionSort(int[] data){
-		for (int i = 0; i < data.length; i++){
+		for (int i = 0; i < data.length - 1; i++){
 			int swapValue = data[i];
 			int swapIndex = i;
 			for (int j = i; j < data.length; j++){
@@ -32,7 +32,7 @@ public class Sorts{
 				}
 			}
 
-			for (int k = i + 1; k < swapIndex; k++){
+			for (int k = swapIndex; k >  i; k--){
 				data[k] = data[k-1];
 			}
 			data[i] = swapValue;
