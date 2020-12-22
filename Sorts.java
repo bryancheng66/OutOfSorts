@@ -20,4 +20,22 @@ public class Sorts{
 			}
 		}
 	}
+
+	public static void selectionSort(int[] data){
+		for (int i = 0; i < data.length; i++){
+			int swapValue = data[i];
+			int swapIndex = i;
+			for (int j = i; j < data.length; j++){
+				if (data[j] < swapValue){
+					swapValue = data[j];
+					swapIndex = j;
+				}
+			}
+
+			for (int k = i + 1; k < swapIndex; k++){
+				data[k] = data[k-1];
+			}
+			data[i] = swapValue;
+		}
+	}
 }
