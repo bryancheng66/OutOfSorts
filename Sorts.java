@@ -38,4 +38,23 @@ public class Sorts{
 			data[i] = swapValue;
 		}
 	}
+
+	public static void insertionSort(int[] data){
+		int position;
+		int currentValue;
+		for (int i = 1; i < data.length; i++){
+			position = i;
+			currentValue = data[i];
+			for (int j = 0; position == i && j < i; j++){
+				if (data[j] > data[i]){
+					position = j;
+				}
+			}
+
+			for (int k = i; k > position; k--){
+				data[k] = data[k-1];
+			}
+			data[position] = currentValue;
+		}
+	}
 }
